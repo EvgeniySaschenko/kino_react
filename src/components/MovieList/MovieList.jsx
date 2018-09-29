@@ -16,9 +16,9 @@ class MovieList extends React.Component{
 	shouldComponentUpdate(nextProps){
 		if(nextProps.location.pathname != this.props.location.pathname && nextProps.location.pathname == '/'){
 			this.props.movieList(0);
-			return nextProps;
+			return true;
 		} else {
-			return nextProps;
+			return true;
 		}
 	}
 
