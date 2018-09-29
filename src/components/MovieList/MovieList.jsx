@@ -13,12 +13,19 @@ class MovieList extends React.Component{
 		super(props);
 	}
 
-	shouldComponentUpdate(nextProps){
+	// shouldComponentUpdate(nextProps){
+	// 	console.log( 1 )
+	// 	if(nextProps.location.pathname != this.props.location.pathname && nextProps.location.pathname == '/'){
+	// 		this.props.movieList(0);
+	// 		return true;
+	// 	} else {
+	// 		return true;
+	// 	}
+	// }
+
+	componentWillReceiveProps(nextProps){
 		if(nextProps.location.pathname != this.props.location.pathname && nextProps.location.pathname == '/'){
 			this.props.movieList(0);
-			return true;
-		} else {
-			return true;
 		}
 	}
 

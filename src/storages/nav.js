@@ -15,6 +15,16 @@ let nav= (store= [], action) => {
 
 			return store;
 		}
+
+		case('HOME_ACTIVE_NAV_ITEM'): {
+			store= store.map( (e) => {
+				e.status= e.link == action.link ? true : false;
+				return e;
+			})
+
+			return store;
+		}
+
 		default:
 			return store;
 	}
