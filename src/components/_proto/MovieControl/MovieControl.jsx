@@ -69,7 +69,7 @@ class MovieControl extends React.Component{
 		let genre= movie.genre.map( e => e.status == true ? e.name : false );
 		genre= genre.filter( e => e != false )
 
-		if( name.value && Number.isInteger( Number(year.value) ) && year.value.length == 4 && text.value && file.files[0] || movie.id && genre.length > 0 ){
+		if( name.value && Number.isInteger( Number(year.value) )  && genre.length > 0 && year.value.length == 4 && text.value && (file.files[0] || movie.id)){
 			let formData= new FormData();
 			formData.append('img', file.files[0])
 			formData.append('name', name.value)

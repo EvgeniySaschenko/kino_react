@@ -48,7 +48,7 @@ export default connect(
 			},
 
 			// Добавить в фильм в БД
-			addMovie: (formData) => {
+			sendMovie: (formData) => {
 				axios({
 					method: 'post',
 					url: window.srcData + 'ctr/index.php?ctr=movie&action=ADD_MOVIE',
